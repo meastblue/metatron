@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  azure-1: #ebf2f6,
+  azure-2: #acc9db,
+  azure-3: #8ab3cc,
+  azure-4: #5792b6,
+  azure-5: #357ca7,
+  azure-6: #255775,
+  azure-7: #204c66,
+);
+
+$specific: (
+  background: azure-1,
+  ui-2: azure-2,
+  ui-3: azure-3,
+  ui-dataviz: azure-4,
+  default: azure-5,
+  hover: azure-6,
+  active: azure-7,
+  100: azure-1,
+  200: azure-2,
+  300: azure-3,
+  400: azure-4,
+  500: azure-5,
+  600: azure-6,
+  700: azure-7,
+);

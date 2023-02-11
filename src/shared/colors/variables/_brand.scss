@@ -1,0 +1,14 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  branch-1: #007d57,
+  branch-2: #5e6a71,
+  branch-3: #52a810,
+);
+
+$specific: (
+  brand-primary: brand-1,
+  brand-secondary: brand-2,
+  brand-accent: brand-3,
+);

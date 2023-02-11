@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  plum-1: #f0e8ed,
+  plum-2: #c0a2b6,
+  plum-3: #a67b97,
+  plum-4: #80426a,
+  plum-5: #661b4c,
+  plum-6: #471335,
+  plum-7: #3e102e,
+);
+
+$specific: (
+  background: plum-1,
+  ui-2: plum-2,
+  ui-3: plum-3,
+  ui-dataviz: plum-4,
+  default: plum-5,
+  hover: plum-6,
+  active: plum-7,
+  100: plum-1,
+  200: plum-2,
+  300: plum-3,
+  400: plum-4,
+  500: plum-5,
+  600: plum-6,
+  700: plum-7,
+);

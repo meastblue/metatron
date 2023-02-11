@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  primary-1: #eef6f4,
+  primary-2: #ddeee9,
+  primary-3: #007d57,
+  primary-4: #006648,
+  primary-5: #004d36,
+);
+
+$specific: (
+  background: primary-1,
+  background-alt: primary-2,
+  default: primary-3,
+  hover: primary-4,
+  active: primary-5,
+  100: primary-1,
+  200: primary-2,
+  300: primary-3,
+  400: primary-4,
+  500: primary-5,
+);

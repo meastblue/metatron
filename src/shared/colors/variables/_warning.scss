@@ -1,0 +1,26 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  warning-1: #fdf4e7,
+  warning-2: #fbe9d0,
+  warning-3: #ee9d2b,
+  warning-4: #ec9213,
+  warning-5: #cf8011,
+  warning-6: #8d570c,
+);
+
+$specific: (
+  background: warning-1,
+  background-alt: warning-2,
+  default: warning-3,
+  hover: warning-4,
+  active: warning-5,
+  strong-text: warning-6,
+  100: warning-1,
+  200: warning-2,
+  300: warning-3,
+  400: warning-4,
+  500: warning-5,
+  600: warning-6,
+);

@@ -1,5 +1,5 @@
 {
-  "name": "@metatron/core",
+  "name": "metatron",
   "private": true,
   "version": "0.0.0",
   "type": "module",

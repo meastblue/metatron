@@ -1,0 +1,24 @@
+@use 'sass:map';
+
+$font-faces: '' 400 'italic' 'OpenSans/OpenSans-Italic.ttf', '' 400 'regular' 'OpenSans/OpenSans-Regular.ttf', '' 500 'italic' 'OpenSans/OpenSans-MediumItalic.ttf',
+  '' 500 'normal' 'OpenSans/OpenSans-Medium.ttf', '' 600 'italic' 'OpenSans/OpenSans-SemiBoldItalic.ttf', '' 600 'normal' 'OpenSans/OpenSans-SemiBold.ttf',
+  '' 700 'italic' 'OpenSans/OpenSans-BoldItalic.ttf', '' 700 'normal' 'OpenSans/OpenSans-Bold.ttf', 'Codensed' 400 'italic' 'OpenSans_Condensed/OpenSans_Condensed-Italic.ttf',
+  'Codensed' 400 'regular' 'OpenSans_Condensed/OpenSans_Condensed-Regular.ttf', 'Codensed' 500 'italic' 'OpenSans_Condensed/OpenSans_Condensed-MediumItalic.ttf',
+  'Codensed' 500 'normal' 'OpenSans_Condensed/OpenSans_Condensed-Medium.ttf', 'Codensed' 600 'italic' 'OpenSans_Condensed/OpenSans_Condensed-SemiBoldItalic.ttf',
+  'Codensed' 600 'normal' 'OpenSans_Condensed/OpenSans_Condensed-SemiBold.ttf', 'Codensed' 700 'italic' 'OpenSans_Condensed/OpenSans_Condensed-BoldItalic.ttf',
+  'Codensed' 700 'normal' 'OpenSans_Condensed/OpenSans_Condensed-Bold.ttf', 'SemiCodensed' 400 'italic' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-Italic.ttf',
+  'SemiCodensed' 400 'regular' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-Regular.ttf',
+  'SemiCodensed' 500 'italic' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-MediumItalic.ttf', 'SemiCodensed' 500 'normal' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-Medium.ttf',
+  'SemiCodensed' 600 'italic' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-SemiBoldItalic.ttf',
+  'SemiCodensed' 600 'normal' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-SemiBold.ttf', 'SemiCodensed' 700 'italic' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-BoldItalic.ttf',
+  'SemiCodensed' 700 'normal' 'OpenSans_SemiCondensed/OpenSans_SemiCodensed-BoldI.ttf';
+
+@each $font-family, $font-weight, $font-style, $file-name in $font-faces {
+  @font-face {
+    font-family: 'Open Sans#{$font-family}';
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-stretch: 100%;
+    src: url('./#{$file-name}');
+  }
+}

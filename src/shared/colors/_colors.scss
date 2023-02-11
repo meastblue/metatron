@@ -1,0 +1,5 @@
+@use './functions/vars' as v;
+@use './mixin/color-class' as b;
+
+@include v.define-root-color-var;
+@include b.define-colors;

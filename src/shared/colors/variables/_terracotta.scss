@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  terracotta-1: #f6ebea,
+  terracotta-2: #daaeab,
+  terracotta-3: #cb8c88,
+  terracotta-4: #b45b54,
+  terracotta-5: #a53931,
+  terracotta-6: #91322b,
+  terracotta-7: #7a2a24,
+);
+
+$specific: (
+  background: terracotta-1,
+  ui-2: terracotta-2,
+  ui-3: terracotta-3,
+  ui-dataviz: terracotta-4,
+  default: terracotta-5,
+  hover: terracotta-6,
+  active: terracotta-7,
+  100: terracotta-1,
+  200: terracotta-2,
+  300: terracotta-3,
+  400: terracotta-4,
+  500: terracotta-5,
+  600: terracotta-6,
+  700: terracotta-7,
+);

@@ -1,0 +1,53 @@
+@use './colors.scss' as C;
+@use '../variables/success';
+@use '../variables/azure' as azure-color;
+@use '../variables/blueberry';
+@use '../variables/brand';
+@use '../variables/cherry';
+@use '../variables/cobalt';
+@use '../variables/danger';
+@use '../variables/forest';
+@use '../variables/fuchsia' as fuchsia-color;
+@use '../variables/info';
+@use '../variables/neutral';
+@use '../variables/peacock';
+@use '../variables/plum' as plum-color;
+@use '../variables/primary';
+@use '../variables/pumpkin';
+@use '../variables/terracotta';
+@use '../variables/warning';
+
+$map-color: (
+  'success': sucess.$specific,
+  'neutral': neutral.$specific,
+  'danger': danger.$specific,
+  'info': info.$specific,
+  'warning': warning.$specific,
+  'fuchsia': fuchsia.$specific,
+  'plum': plum.$specific,
+  'blueberry': blueberry.$specific,
+  'azure': azure.$specific,
+  'cobalt': cobalt.$specific,
+  'peacock': peacock.$specific,
+  'forest': forest.$specific,
+  'cherry': cherry.$specific,
+  'terracotta': terracotta.$specific,
+  'pumpkin': pumpkin.$specific,
+  'primary': primary.$specific,
+  'brand': brand.$specific,
+);
+
+@function get-var($colorName, $key: default) {
+  @return var(--cui-#{$colorName}-#{$key});
+}
+
+@mixin define-root-color-var() {
+  :root {
+    @each $color, $key in map-color {
+      @each $spec-key, $gen-key in keys {
+        $colorValue: c.get($color, $gen-key);
+        --cui-#{$color}-#{spec-key}: #{$colorValue};
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use 'sass:map';
+
+$font-family: 'Open Sans', 'Open Sans Codensed', 'Open Sans Semi Condensed', 'sans serif';
+$font-size: 16px;
+
+:root {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+html {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold, b, strong': 700,
+);
+
+$font-styles: (
+  h1: (
+    fs: 4rem,
+    lh: 6rem,
+  ),
+  h2: (
+    fs: 3rem,
+    lh: 4.5rem,
+  ),
+  h3: (
+    fs: 2.5rem,
+    lh: 3.75rem,
+  ),
+  h4: (
+    fs: 2rem,
+    lh: 3rem,
+  ),
+  h5: (
+    fs: 1.5rem,
+    lh: 2.25rem,
+  ),
+  h6: (
+    fs: 1.25rem,
+    lh: 1.875rem,
+  ),
+  '.subheader-m': (
+    fs: 1.125rem,
+    lh: 1.75rem,
+  ),
+  '.subheader-s': (
+    fs: 1rem,
+    lh: 1.5rem,
+  ),
+  '.body-m': (
+    fs: 1rem,
+    lh: 1.5rem,
+  ),
+  '.body': (
+    fs: 1rem,
+    lh: 1.5rem,
+  ),
+  '.body-s': (
+    fs: 0.875rem,
+    lh: 1.375rem,
+  ),
+  '.caption': (
+    fs: 0.75rem,
+    lh: 1.125rem,
+  ),
+);
+
+@mixin __font-style($selector, $font-style) {
+  $fs: map.get($font-style, 'fs');
+  $lh: map.get($font-style, 'lh');
+
+  #{$selector} {
+    font-family: $font-family;
+    line-height: $lh;
+    font-size: $fs;
+    text-transform: none;
+    font-weight: 400;
+  }
+}
+
+@mixin createFontStyle() {
+  @each $selector, $font-style in $font-styles {
+    @include __font-style($selector, $font-style);
+  }
+
+  @each $name, $weight in $font-weights {
+    .#{name} {
+      font-weight: $weight;
+    }
+  }
+}
+
+@include createFontStyle;
+
+.uppercase {
+  text-transform: uppercase;
+}

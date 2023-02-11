@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  fuchsia-1: #fae8f2,
+  fuchsia-2: #e8a1c8,
+  fuchsia-3: #df7ab1,
+  fuchsia-4: #d1408f,
+  fuchsia-5: #c81978,
+  fuchsia-6: #8c1254,
+  fuchsia-7: #7a0f49,
+);
+
+$specific: (
+  background: fuchsia-1,
+  ui-2: fuchsia-2,
+  ui-3: fuchsia-3,
+  ui-dataviz: fuchsia-4,
+  default: fuchsia-5,
+  hover: fuchsia-6,
+  active: fuchsia-7,
+  100: fuchsia-1,
+  200: fuchsia-2,
+  300: fuchsia-3,
+  400: fuchsia-4,
+  500: fuchsia-5,
+  600: fuchsia-6,
+  700: fuchsia-7,
+);
