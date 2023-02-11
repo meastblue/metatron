@@ -1,0 +1,119 @@
+@use 'sass:meta';
+@use 'sass:map';
+@use '../variables/success';
+@use '../variables/azure' as azure-color;
+@use '../variables/blueberry';
+@use '../variables/brand';
+@use '../variables/cherry';
+@use '../variables/cobalt';
+@use '../variables/danger';
+@use '../variables/forest';
+@use '../variables/fuchsia' as fuchsia-color;
+@use '../variables/info';
+@use '../variables/neutral';
+@use '../variables/peacock';
+@use '../variables/plum' as plum-color;
+@use '../variables/primary';
+@use '../variables/pumpkin';
+@use '../variables/terracotta';
+@use '../variables/warning';
+
+@function __fetch-generic-color($color-key, $color-map) {
+  @return map.get($color-map, $color-key);
+}
+
+@function __fetch-color($color-key, $generic-color-map, $specific-color-map, $name) {
+  $color: __fetch-generic-color($color-key, $generic-color-map);
+
+  @if $color == null {
+    $generic-color-key: map-get($specific-color-map, $color-key);
+
+    @if ($generic-color-key == null) {
+      @error "Colors #{name}: Unknown #{$color-key}";
+    }
+
+    $color: __fetch-generic-color($generic-color-key, $generic-color-map);
+
+    @if ($color == null) {
+      @error "Colors #{$name}: #{color-key} maps to an unknown generic color: #{$generic-color-key}";
+    }
+  }
+
+  @return $color;
+}
+
+@function get($fnName, $key: default) {
+  @if not meta.function-exists($fnName) {
+    @error 'Unknown color function #{$fnName}';
+  }
+
+  @return meta.call(meta.get-function(unquote($fnName)), $key);
+}
+
+@function neutral($key: default) {
+  @return __fetch-color($key, neutral.$generic, neutral.$specific, 'neutral');
+}
+
+@function success($key: default) {
+  @return __fetch-color($key, success.$generic, success.$specific, 'success');
+}
+
+@function warning($key: default) {
+  @return __fetch-color($key, warning.$generic, warning.$specific, 'warning');
+}
+
+@function info($key: default) {
+  @return __fetch-color($key, info.$generic, info.$specific, 'info');
+}
+
+@function danger($key: default) {
+  @return __fetch-color($key, danger.$generic, danger.$specific, 'danger');
+}
+
+@function fuchsia($key: default) {
+  @return __fetch-color($key, fuchsia-color.$generic, fuchsia-color.$specific, 'fuchsia');
+}
+
+@function azure($key: default) {
+  @return __fetch-color($key, azure-color.$generic, azure-color.$specific, 'azure');
+}
+
+@function blueberry($key: default) {
+  @return __fetch-color($key, blueberry.$generic, blueberry.$specific, 'blueberry');
+}
+
+@function plum($key: default) {
+  @return __fetch-color($key, plum-color.$generic, plum-color.$specific, 'plum');
+}
+
+@function peacock($key: default) {
+  @return __fetch-color($key, peacock.$generic, peacock.$specific, 'peacock');
+}
+
+@function forest($key: default) {
+  @return __fetch-color($key, forest.$generic, forest.$specific, 'forest');
+}
+
+@function cherry($key: default) {
+  @return __fetch-color($key, cherry.$generic, cherry.$specific, 'cherry');
+}
+
+@function terracotta($key: default) {
+  @return __fetch-color($key, terracotta.$generic, terracotta.$specific, 'terracotta');
+}
+
+@function pumpkin($key: default) {
+  @return __fetch-color($key, pumpkin.$generic, pumpkin.$specific, 'pumpkin');
+}
+
+@function cobalt($key: default) {
+  @return __fetch-color($key, cobalt.$generic, cobalt.$specific, 'cobalt');
+}
+
+@function primary($key: default) {
+  @return __fetch-color($key, primary.$generic, primary.$specific, 'primary');
+}
+
+@function brand($key: default) {
+  @return __fetch-color($key, brand.$generic, brand.$specific, 'brand');
+}

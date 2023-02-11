@@ -1,0 +1,224 @@
+@use '../functions/vars' as v;
+
+$map-color: (
+  'neutral': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+    'hover',
+    'active',
+  ),
+  'success': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    'hover',
+    'active',
+  ),
+  'danger': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    'hover',
+    'active',
+  ),
+  'info': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    'hover',
+    'active',
+  ),
+  'warning': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    'hover',
+    'active',
+  ),
+  'fuchsia': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'plum': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'blueberry': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'azure': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'cobalt': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'peacock': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'forest': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'cherry': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'terracotta': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'pumpkin': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+  'primary': (
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    'hover',
+    'active',
+  ),
+);
+
+@mixin __define-scheme($prefix) {
+  @each $color, $tint in $map-color {
+    .#{$prefix}-#{$color} {
+      @content ($color, 'default');
+
+      &.hover:hover {
+        @content ($color, "hover");
+      }
+
+      &.active:focus,
+      &.active:focus-within,
+      &.active:focus:active {
+        @content ($color, "active");
+      }
+    }
+
+    @each $t in $tint {
+      .hover\:#{$prefix}-#{$color}-#{$t}:hover {
+        @content ($color, $t);
+      }
+
+      .#{$prefix}-#{$color}-#{$t} {
+        @content ($color, $t);
+      }
+
+      .active\:#{$prefix}-#{$color}-#{$t}:focus {
+        @content ($color, $t);
+      }
+    }
+  }
+}
+
+@mixin define-colors() {
+  @include __define-scheme('bg') using ($color, $t) {
+    background-color: v.get-var($color, $t);
+  }
+
+  @include __define-scheme('txt') using ($color, $t) {
+    color: v.get-var($color, $t);
+  }
+
+  @include __define-scheme('brd') using ($color, $t) {
+    border-color: v.get-var($color, $t);
+  }
+}

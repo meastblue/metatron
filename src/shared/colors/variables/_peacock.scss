@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  peacock-1: #e6f3f4,
+  peacock-2: #96ced4,
+  peacock-3: #6bb9c2,
+  peacock-4: #2b9ba7,
+  peacock-5: #00818f,
+  peacock-6: #007480,
+  peacock-7: #005c66,
+);
+
+$specific: (
+  background: peacock-1,
+  ui-2: peacock-2,
+  ui-3: peacock-3,
+  ui-dataviz: peacock-4,
+  default: peacock-5,
+  hover: peacock-6,
+  active: peacock-7,
+  100: peacock-1,
+  200: peacock-2,
+  300: peacock-3,
+  400: peacock-4,
+  500: peacock-5,
+  600: peacock-6,
+  700: peacock-7,
+);

@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  forest-1: #e7f1f0,
+  forest-2: #9dc4c2,
+  forest-3: #75aba9,
+  forest-4: #398783,
+  forest-5: #116f6a,
+  forest-6: #0f615d,
+  forest-7: #0c4b48,
+);
+
+$specific: (
+  background: forest-1,
+  ui-2: forest-2,
+  ui-3: forest-3,
+  ui-dataviz: forest-4,
+  default: forest-5,
+  hover: forest-6,
+  active: forest-7,
+  100: forest-1,
+  200: forest-2,
+  300: forest-3,
+  400: forest-4,
+  500: forest-5,
+  600: forest-6,
+  700: forest-7,
+);

@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  cobalt-1: #e6edf3,
+  cobalt-2: #96b5cc,
+  cobalt-3: #6b97b7,
+  cobalt-4: #2b6a97,
+  cobalt-5: #004b82,
+  cobalt-6: #00355b,
+  cobalt-7: #002e4f,
+);
+
+$specific: (
+  background: cobalt-1,
+  ui-2: cobalt-2,
+  ui-3: cobalt-3,
+  ui-dataviz: cobalt-4,
+  default: cobalt-5,
+  hover: cobalt-6,
+  active: cobalt-7,
+  100: cobalt-1,
+  200: cobalt-2,
+  300: cobalt-3,
+  400: cobalt-4,
+  500: cobalt-5,
+  600: cobalt-6,
+  700: cobalt-7,
+);

@@ -1,0 +1,26 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  success-1: #f5faf5,
+  success-2: #ddeedf,
+  success-3: #14851d,
+  success-4: #116f18,
+  success-5: #0d5914,
+  success-6: #0a430f,
+);
+
+$specific: (
+  background: success-1,
+  background-alt: success-2,
+  default: success-3,
+  hover: success-4,
+  active: success-5,
+  strong-text: success-6,
+  100: success-1,
+  200: success-2,
+  300: success-3,
+  400: success-4,
+  500: success-5,
+  600: success-6,
+);

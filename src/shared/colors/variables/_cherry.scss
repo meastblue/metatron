@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  cherry-1: #f2e8ea,
+  cherry-2: #c99fa8,
+  cherry-3: #b37883,
+  cherry-4: #923e4e,
+  cherry-5: #7c162a,
+  cherry-6: #681223,
+  cherry-7: #520f1c,
+);
+
+$specific: (
+  background: cherry-1,
+  ui-2: cherry-2,
+  ui-3: cherry-3,
+  ui-dataviz: cherry-4,
+  default: cherry-5,
+  hover: cherry-6,
+  active: cherry-7,
+  100: cherry-1,
+  200: cherry-2,
+  300: cherry-3,
+  400: cherry-4,
+  500: cherry-5,
+  600: cherry-6,
+  700: cherry-7,
+);

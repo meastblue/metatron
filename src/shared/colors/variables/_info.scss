@@ -1,0 +1,26 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  info-1: #ebf3fa,
+  info-2: #d6e6f5,
+  info-3: #176ec4,
+  info-4: #145ca4,
+  info-5: #0f4880,
+  info-6: #0c3864,
+);
+
+$specific: (
+  background: info-1,
+  background-alt: info-2,
+  default: info-3,
+  hover: info-4,
+  active: info-5,
+  strong-text: info-6,
+  100: info-1,
+  200: info-2,
+  300: info-3,
+  400: info-4,
+  500: info-5,
+  600: info-6,
+);

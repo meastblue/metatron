@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  pumpkin-1: #faede6,
+  pumpkin-2: #ecb396,
+  pumpkin-3: #e4946b,
+  pumpkin-4: #d9652b,
+  pumpkin-5: #d14600,
+  pumpkin-6: #b83d00,
+  pumpkin-7: #a33600,
+);
+
+$specific: (
+  background: pumpkin-1,
+  ui-2: pumpkin-2,
+  ui-3: pumpkin-3,
+  ui-dataviz: pumpkin-4,
+  default: pumpkin-5,
+  hover: pumpkin-6,
+  active: pumpkin-7,
+  100: pumpkin-1,
+  200: pumpkin-2,
+  300: pumpkin-3,
+  400: pumpkin-4,
+  500: pumpkin-5,
+  600: pumpkin-6,
+  700: pumpkin-7,
+);

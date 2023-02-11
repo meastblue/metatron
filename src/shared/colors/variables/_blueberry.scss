@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  blueberry-1: #edeff4,
+  blueberry-2: #b6bed3,
+  blueberry-3: #97a3c1,
+  blueberry-4: #6a7ca6,
+  blueberry-5: #4c6194,
+  blueberry-6: #354468,
+  blueberry-7: #2e3b5a,
+);
+
+$specific: (
+  background: blueberry-1,
+  ui-2: blueberry-2,
+  ui-3: blueberry-3,
+  ui-dataviz: blueberry-4,
+  default: blueberry-5,
+  hover: blueberry-6,
+  active: blueberry-7,
+  100: blueberry-1,
+  200: blueberry-2,
+  300: blueberry-3,
+  400: blueberry-4,
+  500: blueberry-5,
+  600: blueberry-6,
+  700: blueberry-7,
+);

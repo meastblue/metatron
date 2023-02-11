@@ -1,0 +1,40 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  neutral-0: #ffffff,
+  neutral-1: #f7f8f8,
+  neutral-2: #eff0f1,
+  neutral-3: #e7e9ea,
+  neutral-4: #dfe1e3,
+  neutral-5: #b7bcbf,
+  neutral-6: #8e979c,
+  neutral-7: #5e6a71,
+  neutral-8: #26212d,
+  neutral-9: #131517,
+);
+
+$specific: (
+  'white': neutral-0,
+  background: neutral-1,
+  background-alt: neutral-3,
+  background-disable: neutral-3,
+  divider: neutral-4,
+  border: neutral-4,
+  default: neutral-4,
+  hover: neutral-5,
+  active: neutral-6,
+  text-minor: neutral-7,
+  disabled: neutral-8,
+  dark-background: neutral-9,
+  000: neutral-0,
+  100: neutral-1,
+  200: neutral-2,
+  300: neutral-3,
+  400: neutral-4,
+  500: neutral-5,
+  600: neutral-6,
+  700: neutral-7,
+  800: neutral-8,
+  900: neutral-9,
+);

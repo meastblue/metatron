@@ -1,0 +1,26 @@
+@use 'sass:color';
+@use 'sass:map';
+
+$generic: (
+  danger-1: #fbe9e9,
+  danger-2: #f7d4d4,
+  danger-3: #dc3837,
+  danger-4: #b62120,
+  danger-5: #8a0100,
+  danger-6: #6d1413,
+);
+
+$specific: (
+  background: danger-1,
+  background-alt: danger-2,
+  default: danger-3,
+  hover: danger-4,
+  active: danger-5,
+  strong-text: danger-6,
+  100: danger-1,
+  200: danger-2,
+  300: danger-3,
+  400: danger-4,
+  500: danger-5,
+  600: danger-6,
+);
