@@ -5,7 +5,11 @@ import preprocess from "svelte-preprocess";
 export default defineConfig({
   build: {
     rollupOptions: {
-      input: "",
+      input: [],
+      output: {
+        entryFileNames: "[name].js",
+        assetFileNames: "[name].[ext]"
+      }
     }
   },
   plugins: [svelte({
