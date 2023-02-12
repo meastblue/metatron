@@ -1,25 +1,21 @@
-<svelte:options tag={null} />
+<svelte:options tag="mtui-app" />
 
 <script lang="ts">
+  import Button from "./lib/Button.svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-  </div>
   <h1>Metatron</h1>
+  <div class="container">
+    <Button variant="text">Button</Button>
+    <Button variant="contained" size="small">Button</Button>
+    <Button variant="outlined">Button</Button>
+  </div>
 </main>
 
 <style type="text/scss">
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  .container {
+    display: flex;
+    flex-direction: row;
   }
 </style>
